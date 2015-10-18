@@ -1,0 +1,218 @@
+
+<!-- saved from url=(0085)file:///C:/Users/Kevin/Documents/MATLAB/Asg1/SampleWebpage/Project%201%20Writeup.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title> Project 1 Writeup  </title>
+</head>
+
+
+<body>
+<center><h1>CSCI3290 Assignment 1 Report</h1> 
+<h2>Lai Chung Sing (1155031274)<br>October 7, 2015<br> 
+</h2>  
+</center>
+
+<hr>
+<h3>Algorithm:  </h3>
+<h5>
+The program exhaustively search through different shift values to determine the shift vector that minimizes the Sum of Squared Difference (SSD) or Normalized Cross Correlation (NCC). You can adjust the method in the code. For larger images, the program will create an image pyramid by recursively scaling the image until its size is small enough, and then do the previous step again.
+
+</h5>
+
+<h3>Results: </h3>
+<h5>
+Nearly all of the images lined up extremely well using the brute-force 
+search, which was to be expected.  When using
+the Image Pyramid method, the majority of the images still lined up very
+ well, however many have slight color blurring due to imperfect 
+alignment.  A couple images, such as images 00954 and 01079, never managed to have 
+all 3 plates line up 
+correctly.  This may be because the images have lower contrast, especially at the corner, there may be much less differentiation
+in the intensities of the color plates. If the window considered for calculation is wider, the results may be better, but it will definitely take even more time.
+
+
+</h5>
+
+<h3> Extra Credit: </h3>
+<ul>
+  <li>I adjusted the white balance of the images.
+</li></ul>
+
+<hr>
+<center><h2> Result Images</h2>
+<h4> JPG Images aligned using Brute Force (Left), and TIF Images aligned using Image Pyramids (Right)</h4>
+<table border="1">
+<tbody><tr>
+  <td>00878</td>
+  <td><img src="./Project 1 Writeup_files/result-00878v.jpg"></td>
+  <td><img src="./Project 1 Writeup_files/result-00878a.jpg" width="55%" height="12%"></td>
+</tr>
+<tr>
+  <td>00954</td>
+  <td><img src="./Project 1 Writeup_files/result-00954v.jpg"></td>
+  <td><img src="./Project 1 Writeup_files/result-00954a.jpg" width="55%" height="12%"></td>
+</tr>
+<tr>
+  <td>00956</td>
+  <td><img src="./Project 1 Writeup_files/result-00956v.jpg"></td>
+  <td><img src="./Project 1 Writeup_files/result-00956a.jpg" width="55%" height="12%"></td>
+</tr>
+<tr>
+  <td>1079</td>
+  <td><img src="./Project 1 Writeup_files/result-01079v.jpg"></td>
+  <td><img src="./Project 1 Writeup_files/result-01079a.jpg" width="55%" height="12%"></td>
+</tr>
+<tr>
+  <td>01025</td>
+  <td><img src="./Project 1 Writeup_files/result-01025v.jpg"></td>
+<td><img src="./Project 1 Writeup_files/result-01025a.jpg" width="55%" height="12%"></td>
+  
+</tr>
+<tr>
+  <td>01070</td>
+  <td><img src="./Project 1 Writeup_files/result-01070v.jpg"></td>
+  
+  <td><img src="./Project 1 Writeup_files/result-01070a.jpg" width="55%"></td>
+</tr>
+<tr>
+  <td>01076</td>
+  <td><img src="./Project 1 Writeup_files/result-01076v.jpg"></td>
+  <td><img src="./Project 1 Writeup_files/result-01076a.jpg" width="55%" height="12%"></td>
+  
+</tr>
+<tr>
+  <td>01030</td>
+  <td><img src="./Project 1 Writeup_files/result-01030v.jpg"></td>
+  <td><img src="./Project 1 Writeup_files/result-01030a.jpg" width="55%" height="12%"></td>
+  
+</tr><tr>
+  <td>01087</td>
+  <td><img src="./Project 1 Writeup_files/result-01087v.jpg"></td>
+  <td><img src="./Project 1 Writeup_files/result-01087u.jpg" width="55%" height="12%"></td>
+  
+</tr>
+</tbody></table>
+
+<hr>
+<p>
+</p> 
+
+
+
+<h4> Red-Shift (y,x) and Green-Shift (y,x) data for all images
+ Image Name <table border="1">
+<tbody>
+  <tr>
+    <th rowspan="2"> imageID </th>
+    <th colspan="3">JPEG (brute force)</th>
+    <th colspan="3">TIF (image pyramids)</th>
+    
+  </tr>
+  <tr>
+    <td> Red Shift </td>
+    <td> Green Shift </td>
+    <td> Time(seconds) </td>
+    <td> Red Shift </td>
+    <td> Green Shift </td>
+    <td> Time(seconds) </td>
+    
+    
+    
+  </tr>
+<tr>
+  <td> 00878 </td> 
+  <td> (2,0) </td>
+  <td> (1,0)</td>
+  <td>4.876844</td>
+  <td> (17,-13) </td>
+  <td> (-1,0) </td>
+  <td> 796.174644 </td>
+</tr>
+<tr>
+  <td> 00954 </td> 
+  <td> (3,7) </td>
+  <td> (0,4)</td>
+  <td>4.138653</td>
+  <td> (-19,13) </td>
+  <td> (-1,-2) </td>
+  <td> 796.625394 </td>
+</tr>
+<tr>
+<td> 00956 </td> 
+<td> (2,4) </td>
+<td> (-2,3)</td>
+<td>5.363058</td>
+<td> (5,21) </td>
+<td> (-15,29) </td>
+  <td> 828.416011 </td>
+</tr>
+<tr>
+<td> 01079 </td> 
+<td> (15,4) </td>
+<td> (8,3)</td>
+<td>4.766041</td>
+<td> (101, -11) </td>
+<td> (-5,-1) </td>
+  <td> 856.807077 </td>
+</tr>
+<tr>
+<td> 01025 </td> 
+<td> (14,6) </td>
+<td> (6,3)</td>
+<td>4.610336</td>
+<td> (69,-35) </td>
+<td> (-4,-2) </td>
+  <td> 694.409997 </td>
+</tr>
+<tr>
+<td> 01070 </td> 
+<td> (13,9) </td>
+<td> (5,5)</td>
+<td>4.816410</td>
+<td> (53,5) </td>
+<td> (-3,-11) </td>
+  <td> 707.721740 </td>
+</tr>
+<tr>
+<td> 01076 </td> 
+<td> (15,5) </td>
+<td> (7,3)</td>
+<td>4.323515</td>
+<td> (85,33) </td>
+<td> (-5,-1) </td>
+  <td>822.485813</td>
+</tr>
+<tr>
+<td> 01030 </td> 
+<td> (-2,0) </td>
+<td> (-3,1)</td>
+<td>4.195145</td>
+<td> (-14,4) </td>
+<td>(-21,11)</td>
+  <td> 759.369435 </td>
+</tr>
+<tr>
+<td> 01087 </td> 
+<td> (15,4) </td>
+<td> (7,2)</td>
+<td>3.659660</td>
+<td> (57,0) </td>
+<td>(0,3)</td>
+  <td>782.365122</td>
+</tr>
+
+
+
+
+</tbody></table>
+
+</h4></center>
+
+
+
+
+
+
+
+ 
+</body></html>
